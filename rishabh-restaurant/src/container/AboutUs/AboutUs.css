@@ -1,0 +1,94 @@
+.app__aboutus {
+    position: relative;
+}
+
+.app__aboutus-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.app__aboutus-overlay img {
+    width: 391px;
+    height: 415px;
+    z-index: 0;
+}
+
+.app__aboutus-content {
+    width: 100%;
+    z-index: 2;
+}
+
+.app__aboutus-content_about {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.app__aboutus-content_knife {
+    margin: 2rem 4rem;
+}
+
+.app__aboutus-content_knife img {
+    height: 910px;
+}
+
+.app__aboutus-content_history {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.app__aboutus-content_about p,
+.app__aboutus-content_history p {
+    margin: 2rem 0;
+    color: var(--color-grey);
+    /* color: var(--color-grey);this has been taken from them main index.css file as this is declared as a general properties. */
+}
+
+@media screen and (min-width: 2000px) {
+    .app__aboutus-content_knife img {
+        height: 1110px;
+    }
+
+    .app__aboutus-content_about p,
+    .app__aboutus-content_history p {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .app__aboutus-content {
+        flex-direction: column;
+        /* flex-direction: column;puts the elements in one straight line */
+    }
+
+    .app__aboutus-content_knife {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__aboutus-overlay img {
+        width: 80%;
+        height: 320px;
+    }
+}
+
+/* maxwidth means that 0 to 650px */
+/*
+syntax for media is:
+@media screen and(max-width:500px){
+
+} */
+
+/* rem stands for root-element 
+The rem unit means "The root element's font-size" (rem stands for "root em"). The <li> elements inside the <ul> with a class of rems take their sizing from the root element ( <html> ). This means that each successive level of nesting does not keep getting larger
+*/
